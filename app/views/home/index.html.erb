@@ -17,6 +17,15 @@
         <!-- Page Heading -->
           <div class="row">
               <div class="col-lg-12">
+                <% if current_user %>
+                <h1 class="page-header">
+                    NLCC Messaging Application
+                    <small>Please Log in</small>
+                </h1>
+                <section class="login">
+                  <%= link_to "Dashboard", user_path(current_user) %>
+                </section>
+                <% else %>
                   <h1 class="page-header">
                       NLCC Messaging Application
                       <small>Please Log in</small>
@@ -35,7 +44,8 @@
                         </div>
                       <% end %>
                       <%= render "devise/shared/links" %>
-              </section>
+                  </section>
+                <% end %>
             </div>
           </div>
           <!-- /.row -->
