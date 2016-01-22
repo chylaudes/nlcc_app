@@ -25,21 +25,18 @@
 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
-        <li>
-          <%= link_to "Home", user_path(current_user) %>
+        <li><%= link_to "Home", user_path(current_user)%></li>
+        <li><%= link_to "Jobs", user_path(current_user) %></li>
+        <li><a href="javascript:;" data-toggle="collapse" data-target="#contacts">Contacts</a>
+          <ul id="contacts" class="collapse">
+            <li><%= link_to "All Contacts", contacts_path %></li>
+            <li><%= link_to "Create a New Contact", new_contact_path %></li>
+          </ul>
         </li>
-        <li>
-          <%= link_to "Jobs", user_path(current_user) %>
-        </li>
-        <li>
-          <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Contacts <i class="fa fa-fw fa-caret-down"></i></a>
-          <ul id="demo" class="collapse">
-            <li>
-              <%= link_to "All Contacts", contacts_path %>
-            </li>
-            <li>
-              <%= link_to "Create a New Contact", new_contact_path %>
-            </li>
+        <li><a href="javascript:;" data-toggle="collapse" data-target="#hotels">Hotels</a>
+          <ul id="hotels" class="collapse">
+            <li><%= link_to "All Hotels", hotels_path %></li>
+            <li><%= link_to "Create a New Hotels", new_hotel_path %></li>
           </ul>
         </li>
       </ul>
