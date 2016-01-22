@@ -28,7 +28,7 @@ gem 'pry-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bootswatch-rails'
 gem 'simple_form'
-
+gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'database_cleaner'
