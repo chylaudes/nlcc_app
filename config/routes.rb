@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :jobs
   root 'home#index'
   resources :users
-  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
+  devise_for :users, controllers: { sessions: "devise/sessions", registrations: "devise/registrations" }
   devise_scope :user do
       get 'signout', :to => 'devise/sessions#destroy'
   end

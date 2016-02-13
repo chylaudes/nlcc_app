@@ -31,6 +31,7 @@ gem 'simple_form'
 gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'mandrill-api'
 gem 'database_cleaner'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

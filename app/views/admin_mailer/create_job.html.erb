@@ -1,0 +1,17 @@
+<!-- This is where you create the layout for the create user method on admin_mailer -->
+<!-- create job responds to the create_job method -->
+
+<div class="page-header">
+  <h1>HELLO <%= @user.email %> <small>Here's your email</small></h1>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"> <%= @job.title %></div>
+  <div class="panel-body">
+  <h3> <%= @job.sunday_date %> </h3>
+  <h3> <%= @job.send_at %></h3>
+  <h4>This job was created by <%= @job.author %></h4>
+  <p><%=@job.description  %></p>
+  </div>
+</div>
