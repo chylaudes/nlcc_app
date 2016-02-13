@@ -4,7 +4,7 @@ class Job < ActiveRecord::Base
   after_create :send_notification
 
   def send_notification
-    AdminMailer.create_job(self, self.user).deliver_now
+    AdminMailer.create_job(self, self.user).deliver
     #code
   end
 end
