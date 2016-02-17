@@ -8,17 +8,18 @@ class SmsService
   end
 
   def send_messages(job)
-    account_sid = ENV['twillio_sid']
-    auth_token = ENV['twillio_token']
-    @job = job
-    @client = Twilio::REST::Client.new account_sid, auth_token
-    @client.account.messages.create({
-      :from => ENV['twillio_number'],
-      :to => '+15105906673',
-      :body => "Courtesy Reminder: This Sunday, #{@job.sunday_date}, New Life Community Church is meeting at the #{@job.title}",
+    contacts = Contacts.all
+    contacts.each do |contact|
 
-    })
-      binding.pry
+      account_sid = ENV['twillio_sid']
+      auth_token = ENV['twillio_token']
+      @job = job
+      @client = Twilio::REST::Client.new account_sid, auth_token
+      @client.account.messages.create({
+        :from => ENV['twillio_number'],
+        :to => contact.phone_number,
+        :body => "Courtesy Reminder: This Sunday, #{@job.sunday_date.strftime('%m/%d')}, New Life Community Church is meeting at the #{@job.hotel.name}",
+      })
   end
-
+  end
 end

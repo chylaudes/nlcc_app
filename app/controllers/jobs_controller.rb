@@ -71,6 +71,6 @@ before_action :set_job, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:title, :sunday_date, :send_at, :author, :description)
+      params.require(:job).permit(:title, :sunday_date, :send_at, :author, :description, :hotel_id)
     end
 end
