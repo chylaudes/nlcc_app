@@ -1,10 +1,6 @@
-require 'rubygems' # not necessary with ruby 1.9 but included for completeness
-require 'twilio-ruby'
 class JobsController < ApplicationController
 before_action :set_job, only: [:show, :edit, :update, :destroy]
 # put your own credentials here
-account_sid = ENV['twillio_sid']
-auth_token = ENV['twillio_token']
   # GET /jobs
   # GET /jobs.json
   def index
@@ -41,6 +37,7 @@ auth_token = ENV['twillio_token']
       end
     end
   end
+
 
   # PATCH/PUT /jobs/1
   # PATCH/PUT /jobs/1.json
