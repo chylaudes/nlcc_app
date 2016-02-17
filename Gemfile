@@ -29,9 +29,10 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bootswatch-rails'
 gem 'simple_form'
 gem 'figaro'
+gem 'twilio-ruby', '~> 4.11.1'
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem 'mandrill-api'
+gem 'mandrill-api', '~> 1.0.51', require: 'mandrill'
 gem 'database_cleaner'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
