@@ -14,8 +14,7 @@
       <tr>
         <td><%=link_to hotel.name, hotel_path(hotel), class:"btn btn-link" %></td>
         <td><%= hotel.address %></td>
-        <td><%= link_to hotel.map_link, hotel.map_link %></td>
-        <td><%= hotel.description %></td>
+        <td><%= link_to "Link to Google Map", hotel.map_link %></td>
         <td><%= link_to 'Edit', edit_hotel_path(hotel), class:"btn btn-warning" %></td>
         <td><%= link_to 'Destroy', hotel, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
       </tr>
